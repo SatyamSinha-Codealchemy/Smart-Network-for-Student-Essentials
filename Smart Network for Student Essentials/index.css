@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa; /* Light gradient base */
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HEADINGS */
+h2 {
+  font-size: 32px;
+  margin: 40px 0;
+  font-weight: 700;
+  background: linear-gradient(90deg,#ff6ec4,#4adede,#ffe28b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 60px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  background: #fff; /* Solid card color */
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.card img {
+  width: 70px;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* TEXT */
+.card p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(45deg,#ff6ec4,#4adede,#ffe28b);
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+/* MARQUEE */
+.marquee {
+  background: #e0e0e0;
+  color: #333;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+/* Section Header with Home Button */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between button and heading */
+    padding: 15px 20px;
+    background: #fff; /* light header */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.section-header .home-btn {
+    padding: 6px 16px;
+    background: linear-gradient(45deg,#ff6ec4,#4adede,#ffe28b);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.section-header .home-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
